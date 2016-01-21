@@ -7,7 +7,10 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "bower install",
+    "start": "gulp",
+    "test": "gulp test",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,19 @@
   "bugs": {
     "url": "https://github.com/mivia/simpleCrud/issues"
   },
-  "homepage": "https://github.com/mivia/simpleCrud#readme"
+  "homepage": "https://github.com/mivia/simpleCrud#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-sass": "^2.1.1",
+    "gulp-uglify": "^1.5.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-coverage": "^0.5.3",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.3",
+    "main-bower-files": "^2.11.1",
+    "phantomjs": "^1.9.19"
+  }
 }
