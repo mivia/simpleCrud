@@ -1,0 +1,47 @@
+<div class="display"> 
+	<h2 ng-if="recordsCount > 0">Total records: {{recordsCount}}</h2>
+	<div ng-if="records.length > 0">
+		<table class="table-bordered">
+			<thead>
+				<tr>
+					<th>
+						Name
+					</th>
+					<th>
+						Email
+					</th>
+					<th>
+						Actions
+					</th>
+				</tr>
+			</thead>
+			<tbody ng-repeat="record in records">
+				<tr>
+					<td>{{record.name}}</td>
+					<td>{{record.email}}</td>
+					<td>
+						<div class="btn-group">
+						  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		   					<i class="fa fa-cogs"></i>
+						  </button>
+						  <div class="dropdown-menu">
+						  	<div>
+						    	<a class="dropdown-item" ng-click="loadUpdateModal(record)">Update</a>
+						  	</div>
+						  	<div>
+						    	<a class="dropdown-item" ng-click="loadDeletingModal(record)">Delete</a>	
+						  	</div>
+						  </div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div ng-if="!records.length">
+		Create a new record!
+	</div>
+	<button class="btn btn-success pull-left" id="new-btn" ng-click="loadAddingModal()">
+		Create new
+	</button>
+</div>
