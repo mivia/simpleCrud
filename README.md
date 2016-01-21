@@ -10,5 +10,6 @@ Install all deps using: npm install
 Local server available at: 127.0.0.1:8080 <br>
 Start watching files with gulp: npm start <br>
 Run all unit tests: npm test <br>
+Check the test coverage at /coverage/report-html
 Make build for production: npm build
 
