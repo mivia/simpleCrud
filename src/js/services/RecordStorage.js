@@ -1,5 +1,5 @@
-angular.module("test")
-.factory("RecordStorage", function($q){
+angular.module('test')
+.factory('RecordStorage', function($q){
 	this.storageID = 'records';
 	var store = this.store = {
 		records: [],

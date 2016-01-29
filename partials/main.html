@@ -26,10 +26,10 @@
 						  </button>
 						  <div class="dropdown-menu">
 						  	<div>
-						    	<a class="dropdown-item" ng-click="loadUpdateModal(record)">Update</a>
+						    	<a class="dropdown-item" ng-click="loadModal(record, 'update-record-modal')">Update</a>
 						  	</div>
 						  	<div>
-						    	<a class="dropdown-item" ng-click="loadDeletingModal(record)">Delete</a>	
+						    	<a class="dropdown-item" ng-click="loadModal(record, 'delete-record-modal')">Delete</a>	
 						  	</div>
 						  </div>
 						</div>
@@ -41,7 +41,7 @@
 	<div ng-if="!records.length">
 		Create a new record!
 	</div>
-	<button class="btn btn-success pull-left" id="new-btn" ng-click="loadAddingModal()">
+	<button class="btn btn-success pull-left" id="new-btn" ng-click="loadModal({}, 'add-record-modal')">
 		Create new
 	</button>
 </div>

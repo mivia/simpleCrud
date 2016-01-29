@@ -14,25 +14,10 @@ angular.module('test')
 		});
 		var records = $scope.records = store.records;
 
-		$scope.loadUpdateModal = function(record){
+		$scope.loadModal = function(record, modal){
 			$scope.recordToChange = record;
 			$scope.$modal.open({
-				templateUrl: '/partials/modals/update-record-modal.html',
-				scope: $scope
-			});
-		}
-
-		$scope.loadAddingModal = function(){
-			$scope.$modal.open({
-				templateUrl: '/partials/modals/add-record-modal.html',
-				scope: $scope
-			});
-		}
-
-		$scope.loadDeletingModal = function(record){
-			$scope.recordToChange = record;
-			$scope.$modal.open({
-				templateUrl: '/partials/modals/delete-record-modal.html',
+				templateUrl: '/partials/modals/' + modal + '.html',
 				scope: $scope
 			});
 		}
